@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.bit.passman.Add">
+
+<EditText
+    android:id="@+id/etResource"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="24dp"
+    android:ems="10"
+    android:inputType="textPersonName" />
+
+<EditText
+    android:id="@+id/etLogin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/etResource"
+    android:layout_marginLeft="21dp"
+    android:layout_marginStart="21dp"
+    android:layout_marginTop="89dp"
+    android:ems="10"
+    android:inputType="textPersonName" />
+
+<EditText
+    android:id="@+id/etPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/etLogin"
+    android:layout_alignStart="@+id/etLogin"
+    android:layout_centerVertical="true"
+    android:ems="10"
+    android:inputType="textPersonName" />
+
+<EditText
+    android:id="@+id/etComment"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/etPassword"
+    android:layout_alignStart="@+id/etPassword"
+    android:layout_below="@+id/etPassword"
+    android:layout_marginTop="33dp"
+    android:ems="10"
+    android:inputType="textMultiLine" />
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Логин"
+    android:layout_alignBaseline="@+id/etLogin"
+    android:layout_alignBottom="@+id/etLogin"
+    android:layout_toRightOf="@+id/etLogin"
+    android:layout_toEndOf="@+id/etLogin" />
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Пароль"
+    android:layout_centerVertical="true"
+    android:layout_alignLeft="@+id/textView"
+    android:layout_alignStart="@+id/textView" />
+
+<TextView
+    android:id="@+id/textView3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Комментарий"
+    android:layout_alignBaseline="@+id/etComment"
+    android:layout_alignBottom="@+id/etComment"
+    android:layout_alignLeft="@+id/textView2"
+    android:layout_alignStart="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_marginBottom="15dp"
+        android:onClick="onClickAdd"
+        android:text="EDIT" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnEdit"
+        android:layout_alignBottom="@+id/btnEdit"
+        android:layout_alignLeft="@+id/etComment"
+        android:layout_alignStart="@+id/etComment"
+        android:onClick="onClickAdd"
+        android:text="Cancel" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnEdit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:text="TextView"
+        android:visibility="visible" />
+</RelativeLayout>

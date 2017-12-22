@@ -101,13 +101,4 @@ tools:context="com.example.bit.passman.Add">
         android:onClick="onClickAdd"
         android:text="Cancel" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnEdit"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="45dp"
-        android:text="TextView"
-        android:visibility="visible" />
 </RelativeLayout>

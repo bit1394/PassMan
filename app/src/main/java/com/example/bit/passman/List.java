@@ -44,13 +44,19 @@ public class List extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 SQLiteDatabase db1 = dbHelper.getReadableDatabase();
-                Cursor cursor = db1.query(DBHelper.TABLE_BASE, null, "" + l,null, null,null,null);
+                Cursor cursor = db1.query(DBHelper.TABLE_BASE, null, null,null, null,null,null);
 
-                String res = "";
-                if (cursor != null){
-                    res = cursor.getString( );
-                }
+                cursor.moveToPosition(i);
+                //tv1.setText(c.getString(c.getColumnIndex(DBHelper.KEY_LOGIN)));
+                String res = cursor.getString(cursor.getColumnIndex(DBHelper.KEY_RESOURCE));
+                String log = cursor.getString(cursor.getColumnIndex(DBHelper.KEY_LOGIN));
+                String pass = cursor.getString(cursor.getColumnIndex(DBHelper.KEY_PASSWORD));
+                String comm = cursor.getString(cursor.getColumnIndex(DBHelper.KEY_COMMENT));
+
                 intent.putExtra("res", res);
+                intent.putExtra("log", log);
+                intent.putExtra("pass", pass);
+                intent.putExtra("comm", comm);
                 startActivity(intent);
 
 

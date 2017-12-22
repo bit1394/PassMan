@@ -19,25 +19,15 @@ public class Edit extends AppCompatActivity {
         EditText comment = findViewById(R.id.etComment);
 
         Intent inCall = getIntent();
-       // TextView tv = (TextView) findViewById(R.id.textView4);
 
         String inRes = inCall.getStringExtra("res");
-/*
-        String inLog = inCall.getStringExtra("id_");
+        String inLog = inCall.getStringExtra("log");
+        String inPass = inCall.getStringExtra("pass");
+        String inComm = inCall.getStringExtra("comm");
 
-        String inPassw = inCall.getStringExtra("password");
-        String inComm = inCall.getStringExtra("comment");
-
-        TextView tv = findViewById(R.id.textView4);
-        tv.setText(inLog);
-*/
         resource.setText(inRes, TextView.BufferType.EDITABLE);
- /*       login.setText(inLog);
-        password.setText(inPassw);
+        login.setText(inLog, TextView.BufferType.EDITABLE);
+        password.setText(inPass);
         comment.setText(inComm);
-*/
-     //   String in = inCall.getStringExtra("id_");
-
-       // tv.setText(in);
     }
 }

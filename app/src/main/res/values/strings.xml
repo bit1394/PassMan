@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PassMan</string>
+    <string name="title_activity_add">Add</string>
+    <string name="title_activity_first">First</string>
+    <string name="title_activity_edit">Edit</string>
+    <string name="title_activity_list">List</string>
+    <string name="title_activity_screen">Screen</string>
+</resources>
